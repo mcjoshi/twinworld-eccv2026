@@ -33,7 +33,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--scenes", nargs="+", default=["tum/scene_000", "tum/scene_002"])
     ap.add_argument("--src", default="experiments/2026-08-08-pipeline-v1")
-    ap.add_argument("--work", default="/data2/manish_joshi/twinworld/work/tumgap")
+    ap.add_argument("--work", default="work/tumgap")
     ap.add_argument("--out", default="experiments/2026-08-10-tum-gapfill")
     args = ap.parse_args()
 

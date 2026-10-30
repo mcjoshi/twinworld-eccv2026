@@ -38,7 +38,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--scenes", nargs="+", required=True)
     ap.add_argument("--src", default="experiments/2026-08-08-pipeline-v1")
-    ap.add_argument("--work", default="/data2/manish_joshi/twinworld/work/gcfuse")
+    ap.add_argument("--work", default="work/gcfuse")
     ap.add_argument("--stride", type=int, default=2)
     ap.add_argument("--alpha-min", type=float, default=0.7)
     ap.add_argument("--interpolated", action="store_true",

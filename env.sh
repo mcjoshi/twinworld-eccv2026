@@ -8,5 +8,5 @@ export PATH=$CUDA_HOME/bin:${PATH:-}
 # where a bare $LD_LIBRARY_PATH on a machine that has never set it aborts.
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:${LD_LIBRARY_PATH:-}
 export TORCH_CUDA_ARCH_LIST="8.0"
-export COLMAP_BIN=/data2/manish_joshi/envs/colmap/bin/colmap
-export TWINWORLD_WORK=/data2/manish_joshi/twinworld/work
+export COLMAP_BIN=${COLMAP_BIN:-colmap}
+export TWINWORLD_WORK=work

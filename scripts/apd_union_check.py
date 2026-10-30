@@ -6,7 +6,7 @@ from twinworld.package import submission_cloud
 from twinworld.scoring import read_ply_xyz, score_geometry, voxel_downsample
 for sid in ("scene_000","scene_001","scene_002","scene_003"):
     s=Scene("tum",sid)
-    apd,_=read_ply_xyz(f"/data2/manish_joshi/twinworld/work/apdmvs/tum/{sid}/conv/APD/APD.ply")
+    apd,_=read_ply_xyz(f"work/apdmvs/tum/{sid}/conv/APD/APD.ply")
     base_ply=Path(f"experiments/2026-08-08-pipeline-v1/tum/{sid}/mvs/fused.ply")
     loose,_=submission_cloud(s, base_ply, cache=base_ply.parent/"submission_cloud.npz")
     gt,_=read_ply_xyz(s.gt_ply)

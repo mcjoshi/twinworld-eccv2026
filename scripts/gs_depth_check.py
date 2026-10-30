@@ -54,7 +54,7 @@ def main() -> None:
     ap.add_argument("--scene", required=True)
     ap.add_argument("--src", default="experiments/2026-08-08-pipeline-v1")
     ap.add_argument("--out", default="experiments/2026-08-10-gs-depth")
-    ap.add_argument("--work", default="/data2/manish_joshi/twinworld/work/gsdepth")
+    ap.add_argument("--work", default="work/gsdepth")
     ap.add_argument("--stride", type=int, default=2)
     args = ap.parse_args()
 

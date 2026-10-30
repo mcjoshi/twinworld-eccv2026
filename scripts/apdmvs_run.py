@@ -31,7 +31,7 @@ from twinworld.scoring import read_ply_xyz, score_geometry
 
 REPO = Path(__file__).resolve().parents[1]
 APD = REPO / "third_party/APD-MVS"
-WORK = Path("/data2/manish_joshi/twinworld/work/apdmvs")
+WORK = Path("work/apdmvs")
 
 
 def remap_model(scene: Scene, out: Path, scale: float) -> None:

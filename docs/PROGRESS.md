@@ -8,7 +8,7 @@ Markers: `[done]` `[next]` `[blocked]`.
 - [done] Analysed Codabench competition 17661. Mirrored all pages, terms, phase and leaderboard
   metadata to `docs/competition/competition_17661.json`, plus the starting kit and
   `render_test_poses.py`.
-- [done] Downloaded the full dataset (1.4 GB, 297 files) to `/data2/manish_joshi/twinworld/data`,
+- [done] Downloaded the full dataset (1.4 GB, 297 files) to `data`,
   symlinked as `data/`.
 - [done] Characterised the data. Key finding: this is a **sparse-view** problem, 12 train views per
   TUM scene and 13-24 per Gold Coast scene, 3 test views each, 13 scenes total.
@@ -20,7 +20,7 @@ Markers: `[done]` `[next]` `[blocked]`.
 - [done] Design spec written and approved:
   `docs/superpowers/specs/2026-08-08-twinworld-challenge-design.md`.
 - [done] Decisions: compete to win; user registers on Codabench and uploads zips; tracking in-repo
-  instead of Linear; GPUs 2 and 3 only; large artefacts under `/data2/manish_joshi`.
+  instead of Linear; GPUs 2 and 3 only; large artefacts under `<WORK_ROOT>`.
 - [next] Phase 0: local scorer, dummy submission, package validator. Then Phase 1 geometry bake-off.
 
 ### Deadlines
@@ -35,7 +35,7 @@ Markers: `[done]` `[next]` `[blocked]`.
   `scoring` (local reimplementation of the official metrics), `package` (submission builder plus
   validator that refuses to write a rejectable zip), `geometry/colmap_mvs`, `render/trainer`
   (gsplat), `semantics` (features + LightGBM classifier). 37 tests pass.
-- [done] Toolchain: COLMAP 3.13 with CUDA into `/data2/manish_joshi/envs/colmap`; gsplat 1.5.3.
+- [done] Toolchain: COLMAP 3.13 with CUDA into `<WORK_ROOT>/envs/colmap`; gsplat 1.5.3.
   The system `nvcc` is 11.5 and cannot parse this machine's gcc-11 headers, so `env.sh` pins
   `CUDA_HOME=/usr/local/cuda-12.3`, which compiles gsplat's kernels cleanly. **Source `env.sh`
   before any gsplat run.**

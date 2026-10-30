@@ -55,7 +55,7 @@ def scene_views(s: Scene, work: Path, cfg):
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", default="experiments/2026-08-10-pipeline-v6")
-    ap.add_argument("--work", default="/data2/manish_joshi/twinworld/work/gcfuse")
+    ap.add_argument("--work", default="work/gcfuse")
     ap.add_argument("--out", default="experiments/2026-08-11-seg2d")
     ap.add_argument("--epochs", type=int, default=40)
     ap.add_argument("--device", default="cuda")

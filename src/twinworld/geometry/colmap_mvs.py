@@ -23,8 +23,8 @@ import numpy as np
 
 from ..dataio import Scene, read_cameras_text, read_images_text
 
-COLMAP_BIN = os.environ.get("COLMAP_BIN", "/data2/manish_joshi/envs/colmap/bin/colmap")
-WORK_ROOT = Path(os.environ.get("TWINWORLD_WORK", "/data2/manish_joshi/twinworld/work"))
+COLMAP_BIN = os.environ.get("COLMAP_BIN", "${COLMAP_BIN:-colmap}")
+WORK_ROOT = Path(os.environ.get("TWINWORLD_WORK", "work"))
 
 
 @dataclass

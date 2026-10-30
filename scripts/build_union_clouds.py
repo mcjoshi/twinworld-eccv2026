@@ -8,7 +8,7 @@ for sid in [f"scene_{i:03d}" for i in range(9)]:
     s=Scene("tum",sid); t0=time.time()
     out=Path(f"experiments/2026-08-08-pipeline-v1/tum/{sid}/mvs/fused_union.ply")
     if out.exists(): print(f"{sid}: exists"); continue
-    apd,_=read_ply_xyz(f"/data2/manish_joshi/twinworld/work/apdmvs/tum/{sid}/conv/APD/APD.ply")
+    apd,_=read_ply_xyz(f"work/apdmvs/tum/{sid}/conv/APD/APD.ply")
     base=out.parent/"fused.ply"
     loose,_=submission_cloud(s, base, cache=out.parent/"submission_cloud.npz")
     u=voxel_downsample(np.vstack([apd,loose]),0.02)
