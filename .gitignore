@@ -1,0 +1,62 @@
+data
+data/
+submissions/*.zip
+third_party/
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints/
+# large run artefacts: keep configs, logs, scores; drop weights/renders/clouds.
+# The point clouds and Gaussian checkpoints are published on Hugging Face at
+# manishjoshiai/twinworld2026-verification; they do not belong in git, and the
+# individual files run to several hundred megabytes each, well past GitHub's
+# 100 MB limit.
+experiments/**/renders/
+experiments/**/ckpt/
+experiments/**/*.ply
+experiments/**/*.pth
+experiments/**/*.npz
+experiments/**/*.pt
+experiments/**/*.tar
+experiments/**/*.png
+submissions/
+*.zip
+
+# 68k flat run logs, 273 MB. The curated record of what every run showed is
+# docs/PROGRESS.md; these are the raw stdout behind it and are not worth
+# versioning.
+logs/
+
+# Scraped Codabench state. These dumps carry 26 other participants' user names
+# and at least one third party's personal e-mail address, which are not ours to
+# republish. Git history is permanent, so they stay out from the first commit
+# rather than being removed before going public.
+docs/competition/
+
+# Working notes, not part of the released work.
+docs/superpowers/
+docs/HANDOFF.md
+docs/GPU_HANDBACK.md
+docs/UPLOAD_LADDER.md
+docs/FINAL_PHASE.md
+EMAIL_DRAFT.md
+
+# Stale draft from 14 Aug, written before the offset-sheet and submission-voxel
+# findings existed; several of its claims are still marked pending. Kept on disk,
+# out of the public repo.
+docs/paper/
+docs/research/
+
+# LaTeX build artefacts
+factsheet/*.aux
+factsheet/*.log
+factsheet/*.out
+factsheet/*.bbl
+factsheet/*.blg
+factsheet/*.brf
+factsheet/*.synctex.gz
+
+# Assistant project config: machine-specific GPU policy, shared-host operational
+# notes, and pointers to directories excluded above.
+CLAUDE.md
+experiments/QUEUE.txt
